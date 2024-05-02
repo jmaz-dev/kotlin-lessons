@@ -1,14 +1,10 @@
 package exceptions
 
 fun main() {
-    val str: String? = null
+    var str: String? = null
 
     // Verificação padrão
-    if (str == null) {
-        println("NULO")
-    } else {
-        println(str)
-    }
+    if (str == null) println("Nulo") else println(str)
 
     println(str ?: "NULO")
 
