@@ -13,16 +13,20 @@ fun main() {
     println("$name $age")
     println("Total PIB per Capita: ${pibPerCapta(pib, pop)}")
 
-    println("Média total = ${media(5, 5, 5, 5)}")
+    println("Média total = ${media(5, 5f, 5f, 5f, false, "Yes")}")
 
 }
 
-fun media(vararg nota: Int): Float {
+fun <J, T> media(abc: J, cdb: Int = 0, vararg nota: T): Float {
     var total = 0f
+    var totalMedia = 0
     for (n in nota) {
-        total += n
+        if (n is Float) {
+            total += n
+            totalMedia++
+        }
     }
-    return total / nota.size
+    return total / totalMedia
 }
 
 fun pibPerCapta(pib: Long, pop: Int): Long = pib / pop
