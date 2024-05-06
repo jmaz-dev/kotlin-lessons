@@ -17,7 +17,7 @@ fun main() {
 
 }
 
-fun <J, T> media(abc: J, cdb: Int = 0, vararg nota: T): Float {
+fun <J, T> media(abc: J, cdb: Float = 0f, vararg nota: T): Float {
     var total = 0f
     var totalMedia = 0
     for (n in nota) {
